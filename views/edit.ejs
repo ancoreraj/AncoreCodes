@@ -1,0 +1,44 @@
+<%- include('header'); %>
+
+    <div class="main">
+        <form method="POST" action="/edit<%=secret%>/<%=docs._id%>">
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                    name="title"
+                    placeholder="Title"
+                    value="<%=docs.title%>" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                name="codeUrl"
+                    placeholder="Code URL" 
+                    value="<%=docs.codeUrl%>" required>
+            </div>
+            <div class="mb-3">
+                <select class="form-select" id="inputGroupSelect01" name="platform" required>
+                    <option selected>GFG</option>
+                    <option value="1">Leetcode</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                name="author"
+                    placeholder="Author" 
+                    value="<%=docs.author%>" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                name="date"
+                    placeholder="Date" 
+                    value="<%=docs.date%>" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <form action="/delete<%=secret%>/<%=docs._id%>" method="POST">
+            <button class="btn btn-warning mt-3" type="submit">Delete</button>
+        </form>
+    </div>
+
+    <%- include('footer'); %>

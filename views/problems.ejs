@@ -1,0 +1,15 @@
+<%- include('header'); %>
+
+<div class="main">
+    <h3>Q. <%=docs.title%></h3>
+    <div class="d-flex">
+        <p class="mx-2"><span class="text-danger">From:</span><%=docs.platform%>, </p>
+        <p class="mx-2"><span class="text-danger">By:</span><%=docs.author%>, </p>
+        <p class="mx-2"><span class="text-danger">Date:</span><%=docs.date%></p>
+    </div>
+    <div class="code">
+        <script src="<%=url%>"></script>
+    </div>
+</div>
+
+<%- include('footer'); %>

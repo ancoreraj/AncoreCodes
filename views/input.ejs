@@ -1,0 +1,39 @@
+<%- include('header'); %>
+
+    <div class="main">
+        <form method="POST" action="/input<%=secret%>">
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                    name="title"
+                    placeholder="Title"
+                    autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                name="codeUrl"
+                    placeholder="Code URL"
+                    autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+                <select class="form-select" id="inputGroupSelect01" name="platform" required>
+                    <option selected>GFG</option>
+                    <option value="1">Leetcode</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control"
+                name="author"
+                    placeholder="Author" 
+                    autocomplete="off" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" autocomplete="off" class="form-control"
+                name="date"
+                    placeholder="Date" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <%- include('footer'); %>

@@ -1,0 +1,12 @@
+<%- include('header'); %>
+    <div class="main">
+        <%allSolution.forEach((sol)=>{%>
+            <div class="results m-3">
+                <a href="/problem/<%=sol._id%>">
+                    <h4 class="text-center"><%=sol.title%></h4>
+                </a>
+            </div>
+            <%})%>
+    </div>
+
+    <%- include('footer'); %>
