@@ -106,7 +106,6 @@ router.post(`/delete${secret}/:id`,(req,res)=>{
 })
 router.get('/allProblems', async (req, res) => {
     const allSolution = await Solution.find({});
-    console.log(allSolution)
     res.render('allProblems', { allSolution, secret })
 });
 
